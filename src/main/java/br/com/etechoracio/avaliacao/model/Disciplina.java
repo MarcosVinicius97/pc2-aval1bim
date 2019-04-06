@@ -11,6 +11,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 
+import br.com.etechoracio.common.model.BaseORM;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,7 +19,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Disciplina {
+public class Disciplina extends BaseORM {
 
 	@Id
 	@GeneratedValue
@@ -40,6 +41,18 @@ public class Disciplina {
 		if (dataCriacao == null) {
 			dataCriacao = new Date();
 		}
+	}
+
+	@Override
+	public Long getId() {
+		
+		return null;
+	}
+
+	@Override
+	public void setId(Long arg0) {
+		
+		
 	}
 
 }

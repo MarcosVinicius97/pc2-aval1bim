@@ -33,8 +33,9 @@ public class DisciplinaMB  {
 	}
 
 	public void onSave() {
-		edit.setProfessores(professores.getTarget(edit));
-		showInsertMessage("Registro inserido com sucesso");
+	    if(professores.getTarget().size()>2) {
+	    	showErrorMessage("É permitido apenas dois professores por disciplina");
+	    }
 	}
 	
 	private ProfessorSB edit = new Professor(); 

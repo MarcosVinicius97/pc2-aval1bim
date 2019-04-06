@@ -13,5 +13,15 @@ public class Professor extends BaseORM{
 
 	private Long matricula;
 	private String nome;
+	@Override
+	public Long getId() {
+		
+		return null;
+	}
+	@Override
+	public void setId(Long arg0) {
+	
+		
+	}
 
 }
